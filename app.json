@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "performa-apps",
+    "slug": "performa-apps",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
