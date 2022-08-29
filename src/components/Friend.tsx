@@ -9,7 +9,7 @@ interface Props {
   };
 }
 
-export function Item({ data }: Props) {
+export function Friend({ data }: Props) {
   return (
     <Text>
       {data.name} - likes: {data.likes}
