@@ -21,6 +21,10 @@ export function Home() {
     setFriends(data);
   }
 
+  function handleFollow() {
+    console.log("follow user");
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Amigos</Text>
@@ -34,7 +38,7 @@ export function Home() {
       <Button title="Buscar" onPress={handleSearch} />
 
       <ScrollView style={styles.list}>
-        <FriendList data={friends} />
+        <FriendList data={friends} follow={handleFollow} />
       </ScrollView>
     </View>
   );
