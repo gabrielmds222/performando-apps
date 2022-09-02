@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import {
   View,
@@ -18,12 +18,13 @@ export function Home() {
   async function handleSearch() {
     const response = await fetch(`http://192.168.1.5:3333/friends?q=${name}`);
     const data = await response.json();
+
     setFriends(data);
   }
 
-  function handleFollow() {
-    console.log("follow user");
-  }
+  const handleFollow = useCallback(() => {
+    console.log("unfollow user");
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -37,9 +38,7 @@ export function Home() {
 
       <Button title="Buscar" onPress={handleSearch} />
 
-      <ScrollView style={styles.list}>
-        <FriendList data={friends} follow={handleFollow} />
-      </ScrollView>
+      <FriendList data={friends} follow={handleFollow} />
     </View>
   );
 }

@@ -21,6 +21,11 @@ function FriendComponent({ data, follow }: Props) {
       <TouchableOpacity onPress={follow}>
         <Text>Deixar de seguir</Text>
       </TouchableOpacity>
+
+      <Text>
+        online em:
+        {new Date().getHours()}:{new Date().getMinutes()}
+      </Text>
     </View>
   );
 }
