@@ -18,7 +18,6 @@ export function Home() {
   async function handleSearch() {
     const response = await fetch(`http://192.168.1.5:3333/friends?q=${name}`);
     const data = await response.json();
-
     setFriends(data);
   }
 
