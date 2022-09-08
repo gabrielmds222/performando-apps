@@ -18,33 +18,6 @@ export function Inicial() {
 
   return (
     <View style={styles.container}>
-      {/* <View style={styles.cardContainer}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
-          style={styles.button}
-        >
-          <Text>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
-          style={styles.button}
-        >
-          <Text>Memo</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
-          style={styles.button}
-        >
-          <Text>useMemo</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
-          style={styles.button}
-        >
-          <Text>useCallback</Text>
-        </TouchableOpacity>
-      </View> */}
-
       <View style={styles.cardContainer}>
         <TouchableOpacity
           onPress={() => navigation.navigate("Home")}
@@ -55,7 +28,7 @@ export function Inicial() {
       </View>
       <View style={styles.cardContainer}>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Memo")}
           style={styles.button}
         >
           <Text>Memo</Text>
