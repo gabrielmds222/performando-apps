@@ -1,6 +1,6 @@
 import React from "react";
 
-import { View, Text } from "react-native";
+import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
 
 export function Cards() {
   return (
