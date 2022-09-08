@@ -11,8 +11,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import { Cards } from "../components/Cards";
-
 export function Inicial() {
   const navigation = useNavigation();
 
@@ -36,7 +34,7 @@ export function Inicial() {
       </View>
       <View style={styles.cardContainer}>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("UseMemo")}
           style={styles.button}
         >
           <Text>useMemo</Text>
@@ -70,7 +68,7 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    backgroundColor: "#444",
+    backgroundColor: "#D8E1F4",
     alignItems: "center",
     justifyContent: "center",
   },

@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 import {
   View,
@@ -7,13 +8,17 @@ import {
   StyleSheet,
   Button,
   ScrollView,
+  TouchableOpacity,
 } from "react-native";
+
+import { Feather } from "@expo/vector-icons";
 
 import { FriendList } from "../components/FriendList";
 
 export function Home() {
   const [name, setName] = useState("");
   const [friends, setFriends] = useState([]);
+  const navigation = useNavigation();
 
   async function handleSearch() {
     const response = await fetch(`http://192.168.1.5:3333/friends?q=${name}`);
@@ -22,9 +27,16 @@ export function Home() {
     setFriends(data);
   }
 
+  function voltar() {
+    navigation.goBack();
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Amigos</Text>
+      <TouchableOpacity style={styles.btnVoltar} onPress={voltar}>
+        <Feather style={styles.iconHeader} name="arrow-left" size={24} />
+      </TouchableOpacity>
+      <Text style={styles.title}>Home</Text>
 
       <TextInput
         placeholder="Nome do cliente"
@@ -58,6 +70,17 @@ const styles = StyleSheet.create({
   },
   list: {
     marginTop: 20,
+  },
+  btnVoltar: {
+    width: 60,
+    height: 45,
+    justifyContent: "center",
+    paddingLeft: 12,
+  },
+
+  iconHeader: {
+    color: "#000",
+    justifyContent: "center",
   },
 });
 

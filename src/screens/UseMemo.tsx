@@ -14,7 +14,7 @@ import {
 import { FriendListPerform } from "../components/FriendListPerform";
 import { Feather } from "@expo/vector-icons";
 
-export function Memo() {
+export function UseMemo() {
   const [name, setName] = useState("");
   const [friends, setFriends] = useState([]);
   const navigation = useNavigation();
@@ -35,7 +35,7 @@ export function Memo() {
       <TouchableOpacity style={styles.btnVoltar} onPress={voltar}>
         <Feather style={styles.iconHeader} name="arrow-left" size={24} />
       </TouchableOpacity>
-      <Text style={styles.title}>Memo</Text>
+      <Text style={styles.title}>UseMemo</Text>
 
       <TextInput
         placeholder="Nome do cliente"
@@ -45,9 +45,7 @@ export function Memo() {
 
       <Button title="Buscar" onPress={handleSearch} />
 
-      <ScrollView style={styles.list}>
-        <FriendListPerform data={friends} />
-      </ScrollView>
+      <FriendListPerform data={friends} />
     </View>
   );
 }
