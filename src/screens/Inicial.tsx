@@ -9,10 +9,16 @@ import {
   ScrollView,
 } from "react-native";
 
-import { FriendList } from "../components/FriendList";
+import { Cards } from "../components/Cards";
 
 export function Inicial() {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      <Cards />
+      <Cards />
+      <Cards />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
